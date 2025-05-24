@@ -48,9 +48,9 @@ type Version struct {
 type AccessType int
 
 const (
-	Read  AccessType = iota
-	Write AccessType
-	Owner AccessType
+	Read AccessType = iota
+	Write
+	Owner
 )
 
 /*
