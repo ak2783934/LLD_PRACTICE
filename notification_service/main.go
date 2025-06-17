@@ -53,3 +53,11 @@ func (ns *NotificationService) Send(channel, to, message string) {
 	}
 	return sender.Send(to, message)
 }
+
+func main() {
+	ns := NewNotificationService()
+
+	ns.Send("email", "alice@example.com", "Welcome to Safe Security!")
+	ns.Send("sms", "+919000000000", "OTP is 123456")
+	ns.Send("push", "user123", "New vulnerability detected")
+}
