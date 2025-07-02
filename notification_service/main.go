@@ -46,7 +46,7 @@ func NewNotificationService() *NotificationService {
 	}
 }
 
-func (ns *NotificationService) Send(channel, to, message string) {
+func (ns *NotificationService) Send(channel, to, message string) error {
 	sender, ok := ns.senders[channel]
 	if !ok {
 		return fmt.Errorf("unsupported channel: %s", channel)
