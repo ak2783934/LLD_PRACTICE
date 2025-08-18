@@ -32,6 +32,6 @@ func main() {
 	notifier := NotificationFactory("email")
 	fmt.Println(notifier.sendMessage("Hello!"))
 
-	notifier1 := NotificationFactory("push")
+	notifier1 := NotificationFactory("sms")
 	fmt.Println(notifier1.sendMessage("Hi!"))
 }
