@@ -7,7 +7,16 @@ type NoMoneyState struct {
 }
 
 func (n *NoMoneyState) InsertCoin(money int) error {
+	if n.vm.totalStock() == 0 {
+		n.vm.setState(&OutOfStockState{n.vm})
+		return errors.New("no items available")
+	}
+	if money <= 0 {
+		return errors.New("invalid amount")
+	}
+
 	n.vm.balance += money
+	n.vm.setState(&HasMoneyState{n.vm})
 	return nil
 }
 func (n *NoMoneyState) SelectProduct(code string) error {

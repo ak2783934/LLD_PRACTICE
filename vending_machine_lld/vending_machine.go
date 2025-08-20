@@ -15,8 +15,8 @@ func (v *VendingMachine) setState(state State) {
 
 func (v *VendingMachine) totalStock() int {
 	total := 0
-	for _, v := range v.stock {
-		total += v
+	for _, q := range v.stock {
+		total += q
 	}
 	return total
 }
