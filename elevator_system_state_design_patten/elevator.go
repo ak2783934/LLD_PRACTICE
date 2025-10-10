@@ -6,7 +6,7 @@ type Elevator struct {
 }
 
 func (e *Elevator) setState(state ElevatorState) {
-e.state = state
+	e.state = state
 }
 
 func (e *Elevator) Request(floor int) {
