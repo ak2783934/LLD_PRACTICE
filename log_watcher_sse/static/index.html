@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Log Stream</title>
+</head>
+<body>
+    <h2>Real-Time Logs</h2>
+    <pre id="logOutput"></pre>
+    <script>
+        const output = document.getElementById("logOutput");
+        const eventSource = new EventSource("/events");
+
+        eventSource.onmessage = (e) => {
+            output.textContent += e.data + "\n";
+            window.scrollTo(0, document.body.scrollHeight);
+        };
+
+        eventSource.onerror = (e) => {
+            console.log("EventSource failed:", e);
+        };
+    </script>
+</body>
+</html>

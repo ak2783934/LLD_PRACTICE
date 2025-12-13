@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Log Viewer</title>
+<style>
+  body { font-family: monospace; padding: 20px; }
+  #log { white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; height: 400px; overflow-y: scroll; }
+</style>
+</head>
+<body>
+<h2>Live Log Viewer</h2>
+<div id="log"></div>
+
+<script>
+const logDiv = document.getElementById("log");
+const ws = new WebSocket("ws://localhost:8080/ws");
+
+ws.onmessage = (event) => {
+    logDiv.textContent += event.data;
+    logDiv.scrollTop = logDiv.scrollHeight; // scroll to bottom
+};
+</script>
+</body>
+</html>
