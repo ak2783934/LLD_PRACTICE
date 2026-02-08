@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/avinashkumar/go/src/lld-practice/elevator_lld_chat_gpt",
+      "program": "/Users/avinashkumar/go/src/lld-practice/elevator_lld_chat_gpt/build/Debug/outDebug"
+    }
+  ]
+}
