@@ -15,6 +15,7 @@ Tables/Entities -> think from the POV of proper database.
 
 
 index on id
+
 User{
     id string
     name string

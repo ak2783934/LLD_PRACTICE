@@ -25,7 +25,6 @@ func (l *LRUCache) get(key int) int {
 	// delete the existing node.
 	// push to head
 	// update the map
-
 	node, ok := l.HashMap[key]
 	if !ok {
 		return -1
@@ -60,7 +59,6 @@ func (l *LRUCache) set(key, val int) {
 	l.HashMap[key] = newNode
 
 	if l.size > l.capacity {
-
 		tail := l.Queue.RemoveTail()
 		delete(l.HashMap, tail.key)
 		l.size--

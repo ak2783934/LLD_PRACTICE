@@ -26,7 +26,6 @@ Ingredient low alert? Can trigger after each orders?
 
 concurrent 
 
-
 User orders a coffee. 
 we show the price and ask for payments.
 simultenously we also check if all the ingredients are available based on recipe. Recipe can be like 5 suger, 2 coffee, 2 milk, 1 water, 1 ice.. 

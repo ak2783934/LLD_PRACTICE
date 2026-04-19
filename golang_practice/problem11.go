@@ -14,7 +14,7 @@ func main() {
 	ch := make(chan int, 10)
 	var wg sync.WaitGroup
 
-	for i := 0; i < 5; i++ {
+	for i := 0; i < 5; i++ {c
 		wg.Add(1)
 		go func() {
 			defer wg.Done()

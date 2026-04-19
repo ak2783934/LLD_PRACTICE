@@ -60,7 +60,7 @@ func (b *BookingManager) BookMeeting(userID string, meetingRoomID string, startT
 			continue
 		}
 
-		if startTime.After(booking.StartTime) && endTime.Before(booking.StartTime) || startTime.After(booking.EndTime) && endTime.Before(booking.EndTime) {
+		if startTime.After(booking.startTime) && endTime.Before(booking.StartTime) || startTime.After(booking.EndTime) && endTime.Before(booking.EndTime) {
 			return "", errors.New("meeting room already booked")
 		}
 	}
